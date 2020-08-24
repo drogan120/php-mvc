@@ -1,9 +1,10 @@
 <?php
-class About extends Controller
+class About extends BaseController
 {
     public function index()
     {
-        $this->view('about/index');
+        $data['name'] = $this->model('usermodel')->getName();
+        $this->view('about/index', $data);
     }
     public function page()
     {

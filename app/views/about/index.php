@@ -9,6 +9,8 @@
 
 <body>
     <h1>about/index</h1>
+    <h1>hello <?php echo $data['name'] ?></h1>
+    <script src="<?= BASE_URL; ?>/js/script.js"></script>
 </body>
 
 </html>
