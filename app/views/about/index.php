@@ -9,7 +9,21 @@
 
 <body>
     <h1>about/index</h1>
-    <h1>hello <?php echo $data['name'] ?></h1>
+    <table>
+        <thead>
+            <tr>x</tr>
+            <tr>title</tr>
+        </thead>
+        <tbody>
+            <?php $no = 1; ?>
+            <?php foreach ($data as $dat) : ?>
+                <tr>
+                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $dat['title']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
     <script src="<?= BASE_URL; ?>/js/script.js"></script>
 </body>
 

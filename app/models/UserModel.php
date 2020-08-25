@@ -2,10 +2,17 @@
 class UserModel
 {
 
-    private $nama  = 'drogan120';
+    private $table  = 'posts';
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = new Database;
+    }
 
     public function getName()
     {
-        return $this->nama;
+        $this->db->query('SELECT * FROM ' . $this->table);
+        return $this->db->all();
     }
 }

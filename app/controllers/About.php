@@ -3,7 +3,7 @@ class About extends BaseController
 {
     public function index()
     {
-        $data['name'] = $this->model('usermodel')->getName();
+        $data = $this->model('usermodel')->getName();
         $this->view('about/index', $data);
     }
     public function page()
